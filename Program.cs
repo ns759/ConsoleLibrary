@@ -84,14 +84,14 @@ namespace Project_3
                                 }
                                 Array.Resize(ref library, library.Length - 1);
                                 Console.WriteLine("The book has been deleted");
-                                }
+                            }
                             catch (Exception)
                             {
                                 Console.WriteLine("Invalid value has been entered. Press any button and enter it once more");
                                 Console.ReadKey();
                                 Console.Clear();
                             }
-                        }                        
+                        }
                         break;
                     case ("3"):
                         if (numOfBooks != 0)
@@ -454,8 +454,8 @@ namespace Project_3
                 {
                     library[i] = new Book { };
                     library[i].SetBookFromFile(
-                        ConvertingTo2dArray(FileReading(path))[i, 0], 
-                        ConvertingTo2dArray(FileReading(path))[i, 1], 
+                        ConvertingTo2dArray(FileReading(path))[i, 0],
+                        ConvertingTo2dArray(FileReading(path))[i, 1],
                         ConvertingTo2dArray(FileReading(path))[i, 2]);
                 }
                 Console.WriteLine("The library has been imported from the file.");
@@ -531,7 +531,7 @@ namespace Project_3
                     arrayFileLines[^1] = line;
                 }
             }
-            
+
             return arrayFileLines;
         }
         /// <summary>
@@ -566,17 +566,17 @@ namespace Project_3
             {
                 StreamWriter sw = new StreamWriter(path);
                 string textLine;
-                string[] titleArray = new string[]{ };
+                string[] titleArray = new string[] { };
                 string titleString = "";
                 string[] authorArray = new string[] { };
                 string authorString = "";
                 int numOfBooksForFile = libraryInstance.Length;
-                for (int i = 0; i<numOfBooksForFile; i++)
+                for (int i = 0; i < numOfBooksForFile; i++)
                 {
                     titleString = "";
                     authorString = "";
                     titleArray = libraryInstance[i].GetTitle().Split(' ');
-                    for(int j=0; j<titleArray.Length; j++)
+                    for (int j = 0; j < titleArray.Length; j++)
                     {
                         titleString += titleArray[j];
                         if (j == titleArray.Length - 1)

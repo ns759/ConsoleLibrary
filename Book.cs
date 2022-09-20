@@ -10,7 +10,7 @@ namespace Project_3
         private string title;
         private int pages;
         public Book()
-        { 
+        {
 
         }
         public void SetBookFromFile(string title, string author, string pagesStr)
@@ -60,7 +60,7 @@ namespace Project_3
                     Console.Write("Set the number of pages for the book number " + bookIndex + ": ");
                     string pagesStr = Console.ReadLine();
                     if (pagesStr != "")
-                        pages =Convert.ToInt32(pagesStr);
+                        pages = Convert.ToInt32(pagesStr);
                     else
                         pages = 0;
                     exceptionBookSetter = true;
