@@ -6,7 +6,7 @@ namespace Project_3
 {
     class AddingBooks
     {
-        public static Book[] Adding(Book[] library)
+        public static Book[] Add(Book[] library)
         {
             bool exceptionChoice = false;
             while (exceptionChoice == false)
