@@ -25,7 +25,6 @@ namespace Project_3
                 numOfBooks = library.Length;
                 switch (choice)
                 {
-                    //Done
                     case ("1"):
                         library = AddingBooks.Adding(library);
                         break;
@@ -66,7 +65,7 @@ namespace Project_3
                         }
                         break;
                     case ("3"):
-                        if (numOfBooks != 0)
+                        if (numOfBooks == 0)
                         {
                             Console.WriteLine("Your library is empty. Add books first.");
                             PressAndContinue();
