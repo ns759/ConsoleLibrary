@@ -25,22 +25,18 @@ namespace Project_3
                 numOfBooks = library.Length;
                 switch (choice)
                 {
+                    //Done
                     case "1":
-                        library = AddingBooks.Adding(library);
+                        library = AddingBooks.Add(library);
                         break;
                     //Done
                     case "2":
                         library = DeletingSpecificBook.Delete(library);
                         break;
+                    //Done
                     case "3":
-                        if (numOfBooks == 0)
-                        {
-                            Console.WriteLine("Your library is empty. Add books first.");
-                            PressAndContinue();
-                            continue;
-                        }
-                        Array.Resize(ref library, library.Length - library.Length);
-                        Console.WriteLine("All books have been deleted. ");
+                        library = DeletingAllBooks.Delete(library);
+                        alreadyDone = true;
                         break;
                     case "4":
                         if (numOfBooks != 0)
