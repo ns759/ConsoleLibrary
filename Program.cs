@@ -449,14 +449,15 @@ namespace Project_3
         {
             if (numOfBooks != 0)
             {
+                string[,] bookContents = ConvertingTo2dArray(FileReading(path));
                 Array.Resize(ref library, library.Length + numOfBooks);
                 for (int i = 0; i < numOfBooks; i++)
                 {
                     library[i] = new Book { };
                     library[i].SetBookFromFile(
-                        ConvertingTo2dArray(FileReading(path))[i, 0],
-                        ConvertingTo2dArray(FileReading(path))[i, 1],
-                        ConvertingTo2dArray(FileReading(path))[i, 2]);
+                        bookContents[i, 0],
+                        bookContents[i, 1],
+                        bookContents[i, 2]);
                 }
                 Console.WriteLine("The library has been imported from the file.");
             }
