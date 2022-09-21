@@ -25,13 +25,14 @@ namespace Project_3
                 numOfBooks = library.Length;
                 switch (choice)
                 {
-                    case ("1"):
+                    case "1":
                         library = AddingBooks.Adding(library);
                         break;
-                    case ("2"):
+                    //Done
+                    case "2":
                         library = DeletingSpecificBook.Delete(library);
                         break;
-                    case ("3"):
+                    case "3":
                         if (numOfBooks == 0)
                         {
                             Console.WriteLine("Your library is empty. Add books first.");
@@ -41,7 +42,7 @@ namespace Project_3
                         Array.Resize(ref library, library.Length - library.Length);
                         Console.WriteLine("All books have been deleted. ");
                         break;
-                    case ("4"):
+                    case "4":
                         if (numOfBooks != 0)
                         {
                             while (exceptionChoice == false)
@@ -67,7 +68,7 @@ namespace Project_3
                         else
                             Console.WriteLine("Your library is empty. Add books first. ");
                         break;
-                    case ("5"):
+                    case "5":
                         if (numOfBooks != 0)
                         {
                             while (exceptionChoice == false)
@@ -89,7 +90,7 @@ namespace Project_3
                         else
                             Console.WriteLine("Your library is empty. Add books first.");
                         break;
-                    case ("6"):
+                    case "6":
                         if (numOfBooks != 0)
                         {
                             while (exceptionChoice == false)
@@ -112,7 +113,7 @@ namespace Project_3
                         else
                             Console.WriteLine("Your library is empty. Add books first.");
                         break;
-                    case ("7"):
+                    case "7":
                         if (numOfBooks != 0)
                         {
                             while (exceptionChoice == false)
@@ -134,7 +135,7 @@ namespace Project_3
                         else
                             Console.WriteLine("Your library is empty. Add books first.");
                         break;
-                    case ("8"):
+                    case "8":
                         if (numOfBooks != 0)
                         {
                             for (int i = 0; i < library.Length; i++)
@@ -151,7 +152,7 @@ namespace Project_3
                         else
                             Console.WriteLine("Your library is empty. Add books first.");
                         break;
-                    case ("9"):
+                    case "9":
                         if (numOfBooks == 0)
                         {
                             Console.WriteLine("Your library is empty. Add books first.");
@@ -200,7 +201,7 @@ namespace Project_3
                                 exceptionChoice = true;
                         }
                         break;
-                    case ("10"):
+                    case "10":
                         if (numOfBooks != 0)
                         {
                             while (exceptionChoice == false)
@@ -242,7 +243,7 @@ namespace Project_3
                         else
                             Console.WriteLine("Your library is empty. Add books first.");
                         break;
-                    case ("11"):
+                    case "11":
                         if (numOfBooks != 0)
                         {
                             while (exceptionChoice == false)
@@ -298,7 +299,7 @@ namespace Project_3
                         else
                             Console.WriteLine("Your library is empty. Add books first.");
                         break;
-                    case ("12"):
+                    case "12":
                         if (numOfBooks != 0 && numOfBooks != 1)
                         {
                             while (exceptionChoice == false)
@@ -353,11 +354,11 @@ namespace Project_3
                         else
                             Console.WriteLine("There aren't enough books in your library. Add books first.");
                         break;
-                    case ("13"):
+                    case "13":
                         SavingToFile(library, path);
                         Console.WriteLine("Changes are saved");
                         break;
-                    case ("0"):
+                    case "0":
                         Console.WriteLine("Would you like to save changes?\nEnter 1 if you do and anything else if you don't");
                         if (Console.ReadLine() == "1")
                             SavingToFile(library, path);
