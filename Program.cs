@@ -28,41 +28,8 @@ namespace Project_3
                     case ("1"):
                         library = AddingBooks.Adding(library);
                         break;
-                    //Done
                     case ("2"):
-                        if (numOfBooks == 0)
-                        {
-                            Console.WriteLine("Your library is empty. Add books first.");
-                            PressAndContinue();
-                            continue;
-                        }
-                        while (exceptionChoice == false)
-                        {
-                            try
-                            {
-                                Console.Write("Enter the book index: ");
-                                int delIndex = Convert.ToInt32(Console.ReadLine());
-                                Console.Clear();
-                                if (delIndex < 0 || delIndex > (library.Length))
-                                    Convert.ToInt32("");
-                                exceptionChoice = true;
-                                if (delIndex != library.Length)
-                                {
-                                    for (int i = delIndex - 1; i < library.Length - 1; i++)
-                                    {
-                                        library[i] = library[i + 1];
-                                    }
-                                }
-                                Array.Resize(ref library, library.Length - 1);
-                                Console.WriteLine("The book has been deleted");
-                            }
-                            catch (Exception)
-                            {
-                                Console.WriteLine("Invalid value has been entered. Press any button and enter it once more");
-                                Console.ReadKey();
-                                Console.Clear();
-                            }
-                        }
+                        library = DeletingSpecificBook.Delete(library);
                         break;
                     case ("3"):
                         if (numOfBooks == 0)
@@ -467,11 +434,11 @@ namespace Project_3
         /// </summary>
         /// <param name="numOfBooks">Number of books in the library</param>
         /// <returns>Index of the book user wants to work with</returns>
-        static int EnteringIndex(int numOfBooks)
+        static public int EnteringIndex(int numOfBooks)
         {
             Console.Write("Enter the book index: ");
             int bookIndex = Convert.ToInt32(Console.ReadLine()) - 1;
-            if (bookIndex < 0 && bookIndex >= numOfBooks)
+            if (bookIndex < 0 || bookIndex >= numOfBooks)
                 Convert.ToInt32("");
             Console.Clear();
             return bookIndex;
