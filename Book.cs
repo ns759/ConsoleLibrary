@@ -63,6 +63,7 @@ namespace Project_3
                     else
                         pages = 0;
                     exceptionBookSetter = true;
+                    Console.Clear();
                 }
                 catch (Exception)
                 {
