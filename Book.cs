@@ -38,9 +38,8 @@ namespace Project_3
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("You must enter the book title. Press any button and enter the title.");
-                    Console.ReadKey();
-                    Console.Clear();
+                    Console.WriteLine("You must enter the book title.");
+                    Program.PressAndContinue();
                 }
             }
             Console.Clear();
@@ -67,10 +66,9 @@ namespace Project_3
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Invalid value has been entered. Press any button and enter it once more");
-                    Console.ReadKey();
+                    Console.WriteLine("Invalid value has been entered.");
+                    Program.PressAndContinue();
                 }
-                Console.Clear();
             }
         }
         public void ReSetTitle()
@@ -96,16 +94,16 @@ namespace Project_3
                         }
                     }
                     else
-                        Convert.ToInt32("No.");
+                        Convert.ToInt32("");
                     exceptionBookSetter = true;
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("You must enter the book title. Press any button and enter the title.");
-                    Console.ReadKey();
-                    Console.Clear();
+                    Console.WriteLine("You must enter the book title.");
+                    Program.PressAndContinue();
                 }
             }
+            Console.Clear();
         }
         public void ReSetAuthor()
         {
@@ -126,8 +124,8 @@ namespace Project_3
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Invalid value has been entered. Press any button and enter it once more");
-                    Console.ReadKey();
+                    Console.WriteLine("Invalid value has been entered.");
+                    Program.PressAndContinue();
                 }
                 Console.Clear();
             }
