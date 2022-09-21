@@ -27,35 +27,7 @@ namespace Project_3
                 {
                     //Done
                     case ("1"):
-                        while (exceptionChoice == false)
-                        {
-                            try
-                            {
-                                int previousLength = library.Length;
-                                Console.WriteLine("How many books would you like to add?");
-                                int newBooksNum = Convert.ToInt32(Console.ReadLine());
-                                Console.Clear();
-                                if (newBooksNum <= 0)
-                                    Convert.ToInt32("");
-                                exceptionChoice = true;
-                                Array.Resize(ref library, library.Length + newBooksNum);
-                                for (int i = previousLength; i < library.Length; i++)
-                                {
-                                    library[i] = new Book() { };
-                                    library[i].SetBook(i + 1);
-                                }
-
-                                if (newBooksNum == 1)
-                                    Console.WriteLine("New book has been added");
-                                else
-                                    Console.WriteLine("New books have been added");
-                            }
-                            catch (Exception)
-                            {
-                                Console.WriteLine("Invalid value has been entered.");
-                                PressAndContinue();
-                            }
-                        }
+                        library = AddingBooks.Adding(library);
                         break;
                     //Done
                     case ("2"):
@@ -423,6 +395,7 @@ namespace Project_3
                         Console.WriteLine("Would you like to save changes?\nEnter 1 if you do and anything else if you don't");
                         if (Console.ReadLine() == "1")
                             SavingToFile(library, path);
+                        alreadyDone = true;
                         break;
                     default:
                         Console.Write("Invalid value has been entered. ");
@@ -613,7 +586,7 @@ namespace Project_3
             }
             Console.Clear();
         }
-        static void PressAndContinue()
+        public static void PressAndContinue()
         {
             Console.Write("Press any button to continue");
             Console.ReadKey();
