@@ -49,26 +49,7 @@ namespace Project_3
                         AuthorResetting.Reset(library);
                         break;
                     case "7":
-                        if (numOfBooks != 0)
-                        {
-                            while (exceptionChoice == false)
-                            {
-                                try
-                                {
-                                    library[EnteringIndex(numOfBooks)].ReSetPages();
-                                    exceptionChoice = true;
-                                    Console.WriteLine("The number of pages has been changed! ");
-                                }
-                                catch (Exception)
-                                {
-                                    Console.WriteLine("Invalid value has been entered. Press any button and enter it once more");
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                }
-                            }
-                        }
-                        else
-                            Console.WriteLine("Your library is empty. Add books first.");
+                        PagesResetting.Reset(library);
                         break;
                     case "8":
                         if (numOfBooks != 0)
