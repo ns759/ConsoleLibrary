@@ -33,7 +33,7 @@ namespace Project_3
                         this.title = title;
                     }
                     else
-                        Convert.ToInt32("No.");
+                        Convert.ToInt32("");
                     exceptionBookSetter = true;
                 }
                 catch (Exception)
@@ -108,7 +108,11 @@ namespace Project_3
         public void ReSetAuthor()
         {
             Console.Write("Change the author for the book: ");
-            this.author = Console.ReadLine();
+            string author = Console.ReadLine();
+            if (author != "")
+                this.author = author;
+            else
+                this.author = "No Author";
             Console.Clear();
         }
         public void ReSetPages()
