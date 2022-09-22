@@ -123,7 +123,12 @@ namespace Project_3
                 try
                 {
                     Console.Write("Change the number of pages for the book: ");
-                    pages = Convert.ToInt32(Console.ReadLine());
+                    string pagesStr = Console.ReadLine();
+                    Console.Clear();
+                    if (pagesStr == "")
+                        pages = 0;
+                    else
+                        pages = Convert.ToInt32(pagesStr);
                     exceptionPageReSetter = true;
                 }
                 catch (Exception)
@@ -131,7 +136,6 @@ namespace Project_3
                     Console.WriteLine("Invalid value has been entered.");
                     Program.PressAndContinue();
                 }
-                Console.Clear();
             }
         }
         public void GetBook(out string title, out string author, out int pages)
