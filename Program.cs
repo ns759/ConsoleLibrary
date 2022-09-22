@@ -48,6 +48,10 @@ namespace Project_3
                         TitleResetting.Reset(library);
                         alreadyDone = true;
                         break;
+                    case "6":
+                        AuthorResetting.Reset(library);
+                        alreadyDone = true;
+                        break;
                     case "7":
                         if (numOfBooks != 0)
                         {
