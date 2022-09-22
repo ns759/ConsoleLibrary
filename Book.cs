@@ -104,7 +104,6 @@ namespace Project_3
                     Program.PressAndContinue();
                 }
             }
-            Console.Clear();
         }
         public void ReSetAuthor()
         {
