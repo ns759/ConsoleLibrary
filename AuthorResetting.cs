@@ -28,7 +28,6 @@ namespace Project_3
             }
             else
                 Console.WriteLine("Your library is empty. Add books first.");
-            Program.PressAndContinue();
         }
     }
 }

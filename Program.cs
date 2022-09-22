@@ -36,21 +36,17 @@ namespace Project_3
                     //Done
                     case "3":
                         library = DeletingAllBooks.Delete(library);
-                        alreadyDone = true;
                         break;
                     //Done
                     case "4":
                         DescriptionSpecificBook.Description(library);
-                        alreadyDone = true;
                         break;
                     //Done
                     case "5":
                         TitleResetting.Reset(library);
-                        alreadyDone = true;
                         break;
                     case "6":
                         AuthorResetting.Reset(library);
-                        alreadyDone = true;
                         break;
                     case "7":
                         if (numOfBooks != 0)

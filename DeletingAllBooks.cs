@@ -10,14 +10,13 @@ namespace Project_3
         {
             if (library.Length != 0)
             {
-                Array.Resize(ref library, library.Length - library.Length);
+                Array.Resize(ref library, 0);
                 Console.WriteLine("All books have been deleted. ");
             }
             else
             {
                 Console.WriteLine("Your library is empty. Add books first.");
             }
-            Program.PressAndContinue();
             return library;
         }
     }
