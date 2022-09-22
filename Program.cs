@@ -38,31 +38,10 @@ namespace Project_3
                         library = DeletingAllBooks.Delete(library);
                         alreadyDone = true;
                         break;
+                    //Done
                     case "4":
-                        if (numOfBooks != 0)
-                        {
-                            while (exceptionChoice == false)
-                            {
-                                try
-                                {
-                                    int bookIndex = EnteringIndex(numOfBooks);
-                                    exceptionChoice = true;
-                                    library[bookIndex].GetBook(out string titleGet, out string authorGet, out int pagesGet);
-                                    Console.WriteLine("Book number " + (bookIndex + 1));
-                                    Console.WriteLine(titleGet);
-                                    Console.WriteLine("by " + authorGet);
-                                    Console.WriteLine(pagesGet + " pages\n");
-                                }
-                                catch (Exception)
-                                {
-                                    Console.WriteLine("Invalid value has been entered. Press any button and enter it once more");
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                }
-                            }
-                        }
-                        else
-                            Console.WriteLine("Your library is empty. Add books first. ");
+                        DescriptionSpecificBook.Description(library);
+                        alreadyDone = true;
                         break;
                     case "5":
                         if (numOfBooks != 0)
