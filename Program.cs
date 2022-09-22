@@ -43,50 +43,10 @@ namespace Project_3
                         DescriptionSpecificBook.Description(library);
                         alreadyDone = true;
                         break;
+                    //Done
                     case "5":
-                        if (numOfBooks != 0)
-                        {
-                            while (exceptionChoice == false)
-                            {
-                                try
-                                {
-                                    int bookIndex = EnteringIndex(numOfBooks);
-                                    exceptionChoice = true;
-                                    library[bookIndex].ReSetTitle();
-                                }
-                                catch (Exception)
-                                {
-                                    Console.WriteLine("Invalid value has been entered. Press any button and enter it once more");
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                }
-                            }
-                        }
-                        else
-                            Console.WriteLine("Your library is empty. Add books first.");
-                        break;
-                    case "6":
-                        if (numOfBooks != 0)
-                        {
-                            while (exceptionChoice == false)
-                            {
-                                try
-                                {
-                                    int bookIndex = EnteringIndex(numOfBooks);
-                                    exceptionChoice = true;
-                                    library[bookIndex].ReSetAuthor();
-                                    Console.WriteLine("The author has been changed!");
-                                }
-                                catch (Exception)
-                                {
-                                    Console.WriteLine("Invalid value has been entered. Press any button and enter it once more");
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                }
-                            }
-                        }
-                        else
-                            Console.WriteLine("Your library is empty. Add books first.");
+                        TitleResetting.Reset(library);
+                        alreadyDone = true;
                         break;
                     case "7":
                         if (numOfBooks != 0)
