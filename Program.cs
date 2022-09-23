@@ -45,28 +45,16 @@ namespace Project_3
                     case "5":
                         TitleResetting.Reset(library);
                         break;
+                    //Done
                     case "6":
-                        AuthorResetting.Reset(library);
                         break;
+                    //Done
                     case "7":
                         PagesResetting.Reset(library);
                         break;
+                    //Done
                     case "8":
-                        if (numOfBooks != 0)
-                        {
-                            for (int i = 0; i < library.Length; i++)
-                            {
-                                library[i].GetBook(out string titleGet, out string authorGet, out int pagesGet);
-                                Console.WriteLine("Book number " + (i + 1));
-                                Console.WriteLine(titleGet);
-                                Console.WriteLine("by " + authorGet);
-                                Console.WriteLine(pagesGet + " pages");
-                                Console.WriteLine();
-                                Console.WriteLine();
-                            }
-                        }
-                        else
-                            Console.WriteLine("Your library is empty. Add books first.");
+                        DescriptionAllBooks.Desription(library);
                         break;
                     case "9":
                         if (numOfBooks == 0)
